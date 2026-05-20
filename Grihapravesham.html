@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grihapravesham Invitation 🪔</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Cinzel+Decorative:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --gold: #c9943a;
+      --deep-gold: #a0722a;
+      --light-gold: #f5d78e;
+      --cream: #fdf6e3;
+      --deep: #2b1a0e;
+      --saffron: #e8870a;
+      --red: #b5341b;
+      --green: #2d6a3f;
+      --off-white: #fff8ed;
+      --rose: #f7cfc2;
+      --shadow: rgba(70, 38, 12, 0.14);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      font-family: 'Lora', serif;
+      color: var(--deep);
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    body::before {
+      background: var(--rose);
+      left: -170px;
+      top: -160px;
+    }
+
+    body::after {
+      background: var(--light-gold);
+      right: -160px;
+      bottom: -170px;
+    }
+
+    .top-border {
+      width: 100%;
+      height: 14px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--red) 0 18px,
+        var(--gold) 18px 36px,
+        var(--green) 36px 54px,
+        var(--gold) 54px 72px
+      );
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .quick-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 248, 237, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(201, 148, 58, 0.22);
+      padding: 10px 16px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .quick-nav a {
+      color: var(--deep);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(201, 148, 58, 0.25);
+      transition: 0.25s ease;
+    }
+
+    .quick-nav a:hover {
+      background: var(--deep);
+      color: var(--light-gold);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 14px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 58px 22px 76px;
+      background:
+        radial-gradient(ellipse 75% 48% at 50% 0%, rgba(201, 148, 58, 0.22) 0%, transparent 68%),
+        radial-gradient(circle at 18% 22%, rgba(181, 52, 27, 0.08), transparent 27%),
+        radial-gradient(circle at 85% 78%, rgba(45, 106, 63, 0.08), transparent 28%),
+        url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9943a' fill-opacity='0.06'%3E%3Cpath d='M35 0l4 12 12 4-12 4-4 12-4-12-12-4 12-4zM10 45l2 7 7 2-7 2-2 7-2-7-7-2 7-2zM60 42l2 7 7 2-7 2-2 7-2-7-7-2 7-2z'/%3E%3C/g%3E%3C/svg%3E"),
+        var(--off-white);
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: '✦';
+      position: absolute;
+      font-size: clamp(42px, 8vw, 82px);
+      color: rgba(201, 148, 58, 0.18);
+      top: 34px;
+    }
+
+    .hero::before {
+      left: 36px;
+    }
+
+    .hero::after {
+      right: 36px;
+    }
+
+    .flower-corner {
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .flower-corner.left {
+      left: -50px;
+      bottom: -45px;
+      background: radial-gradient(circle, rgba(181, 52, 27, 0.18) 0 18%, transparent 19%), radial-gradient(circle at 35% 65%, rgba(201, 148, 58, 0.22) 0 16%, transparent 17%);
+      border-radius: 50%;
+    }
+
+    .flower-corner.right {
+      right: -50px;
+      top: 120px;
+      background: radial-gradient(circle, rgba(232, 135, 10, 0.18) 0 18%, transparent 19%), radial-gradient(circle at 65% 35%, rgba(45, 106, 63, 0.16) 0 16%, transparent 17%);
+      border-radius: 50%;
+    }
+
+    .hero-inner {
+      width: min(920px, 100%);
+      position: relative;
+      z-index: 1;
+      animation: fadeUp 900ms ease both;
+    }
+
+    .om-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 78px;
+      height: 78px;
+      margin-bottom: 13px;
+      border-radius: 50%;
+      font-size: 48px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(201, 148, 58, 0.36);
+      box-shadow: 0 14px 36px rgba(201, 148, 58, 0.18);
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.055); }
+    }
+
+    .hero-subtitle,
+    .section-tag,
+    .info-label,
+    .countdown-unit {
+      font-family: 'Cinzel Decorative', serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(11px, 2.3vw, 14px);
+      color: var(--saffron);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      font-family: 'Yeseva One', serif;
+      font-size: clamp(43px, 9.4vw, 90px);
+      line-height: 1.05;
+      color: var(--deep);
+      text-shadow: 2px 2px 0 rgba(201, 148, 58, 0.25);
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+    }
+
+    .hero-meaning {
+      font-style: italic;
+      font-size: clamp(14px, 3vw, 18px);
+      color: var(--deep-gold);
+      margin-bottom: 28px;
+    }
+
+    .ganesha-block {
+      width: clamp(190px, 38vw, 265px);
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+
+    .ganesha-frame {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 5px solid var(--gold);
+      box-shadow: 0 0 0 8px rgba(201, 148, 58, 0.14), 0 14px 48px rgba(0, 0, 0, 0.16);
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 35%, #fff8df, #f5d78e 72%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .ganesha-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ganesha-placeholder {
+      text-align: center;
+      padding: 18px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .ganesha-placeholder .emoji {
+      display: block;
+      font-size: 76px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .ganesha-placeholder .hint {
+      display: block;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
+      color: rgba(43, 26, 14, 0.68);
+      max-width: 150px;
+    }
+
+    .ganesha-block {
+  width: clamp(190px, 38vw, 265px);
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.ganesha-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 5px solid var(--gold);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ganesha-label {
+  width: 100%;
+  margin-top: 12px;
+  color: var(--deep-gold);
+  font-size: clamp(11px, 2.4vw, 13px);
+  line-height: 1.55;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 8px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  border-radius: 999px;
+  background: rgba(255, 248, 237, 0.88);
+  border: 1px solid rgba(201, 148, 58, 0.35);
+  white-space: normal;
+  overflow: visible;
+}
+
+    .divider {
+      width: min(220px, 60%);
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 28px;
+      position: relative;
+    }
+
+    .divider::after {
+      content: "◆";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--off-white);
+      color: var(--gold);
+      padding: 0 8px;
+      font-size: 14px;
+    }
+
+    .blessings-text {
+      max-width: 680px;
+      margin: auto;
+      font-size: clamp(17px, 3.4vw, 22px);
+      line-height: 1.82;
+      color: var(--deep);
+    }
+
+    .hero-actions {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    section {
+      padding: 66px 20px;
+    }
+
+    .section-title {
+      font-family: 'Yeseva One', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      color: var(--deep);
+      text-align: center;
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .section-title span {
+      color: var(--gold);
+    }
+
+    .section-tag {
+      text-align: center;
+      font-size: 10px;
+      color: var(--saffron);
+      margin-bottom: 38px;
+      font-weight: 700;
+    }
+
+    .invite-section {
+      background: var(--off-white);
+      position: relative;
+    }
+
+    .invite-card {
+      max-width: 740px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid var(--light-gold);
+      border-radius: 26px;
+      padding: clamp(30px, 6vw, 58px);
+      box-shadow: 0 18px 60px var(--shadow);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .invite-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 7px;
+      background: linear-gradient(90deg, var(--red), var(--gold), var(--saffron), var(--gold), var(--red));
+    }
+
+    .invite-card::after {
+      content: '🪔';
+      position: absolute;
+      right: 20px;
+      bottom: 16px;
+      font-size: 56px;
+      opacity: 0.08;
+    }
+
+    .invite-salutation {
+      font-size: clamp(15px, 3vw, 18px);
+      color: var(--deep-gold);
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .invite-body {
+      font-size: clamp(17px, 3.2vw, 21px);
+      line-height: 1.9;
+      color: var(--deep);
+    }
+
+    .invite-body strong {
+      color: var(--red);
+      font-style: italic;
+    }
+
+    .invite-family {
+      margin-top: 22px;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(13px, 2.5vw, 16px);
+      color: var(--gold);
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .info-section {
+      background: var(--cream);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+      gap: 22px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 22px;
+      padding: 34px 24px;
+      text-align: center;
+      border: 1.5px solid var(--light-gold);
+      box-shadow: 0 10px 30px rgba(201, 148, 58, 0.1);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(245, 215, 142, 0.22), transparent 52%);
+      pointer-events: none;
+    }
+
+    .info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 44px rgba(201, 148, 58, 0.19);
+    }
+
+    .info-icon {
+      font-size: 44px;
+      margin-bottom: 14px;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-label {
+      font-size: 10px;
+      color: var(--saffron);
+      margin-bottom: 10px;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-value {
+      font-family: 'Yeseva One', serif;
+      font-size: clamp(18px, 3.4vw, 22px);
+      color: var(--deep);
+      line-height: 1.45;
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-sub {
+      font-size: 15px;
+      color: #7a5c3a;
+      margin-top: 8px;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
+
+    .countdown-section {
+      background: linear-gradient(135deg, #2b1a0e 0%, #4a2c12 55%, #241309 100%);
+      text-align: center;
+      padding: 74px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .countdown-section::before,
+    .countdown-section::after {
+      content: '🪔';
+      position: absolute;
+      font-size: 210px;
+      opacity: 0.045;
+      pointer-events: none;
+    }
+
+    .countdown-section::before {
+      top: -40px;
+      left: -35px;
+    }
+
+    .countdown-section::after {
+      bottom: -45px;
+      right: -25px;
+    }
+
+    .countdown-title {
+      font-family: 'Yeseva One', serif;
+      font-size: clamp(24px, 4vw, 36px);
+      color: var(--light-gold);
+      margin-bottom: 8px;
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+    }
+
+    .countdown-sub {
+      color: rgba(245, 215, 142, 0.68);
+      font-style: italic;
+      margin-bottom: 40px;
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: clamp(13px, 3vw, 28px);
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .countdown-box {
+      background: rgba(255, 255, 255, 0.075);
+      border: 1.5px solid rgba(201, 148, 58, 0.42);
+      border-radius: 18px;
+      padding: 24px 18px 16px;
+      min-width: 94px;
+      box-shadow: inset 0 0 28px rgba(245, 215, 142, 0.04);
+    }
+
+    .countdown-num {
+      font-family: 'Yeseva One', serif;
+      font-size: clamp(38px, 7vw, 58px);
+      color: var(--light-gold);
+      line-height: 1;
+    }
+
+    .countdown-unit {
+      font-size: 10px;
+      color: var(--saffron);
+      margin-top: 9px;
+      font-weight: 700;
+    }
+
+    #countdown-message {
+      margin-top: 30px;
+      font-family: 'Yeseva One', serif;
+      font-size: clamp(20px, 4vw, 28px);
+      color: var(--light-gold);
+      position: relative;
+      z-index: 1;
+    }
+
+    .location-section {
+      background: var(--cream);
+    }
+
+    .location-card {
+      max-width: 760px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 26px;
+      padding: clamp(30px, 6vw, 52px);
+      text-align: center;
+      border: 2px solid var(--light-gold);
+      box-shadow: 0 16px 46px rgba(201, 148, 58, 0.12);
+    }
+
+    .address-text {
+      font-size: clamp(16px, 3vw, 20px);
+      line-height: 1.85;
+      color: var(--deep);
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    .btn-group,
+    .rsvp-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 28px;
+      border-radius: 999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(14px, 2.5vw, 16px);
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+      min-height: 54px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-maps,
+    .btn-red {
+      background: linear-gradient(135deg, var(--red), #c0392b);
+      color: white;
+    }
+
+    .btn-copy,
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--deep-gold));
+      color: white;
+    }
+
+    .btn-copy.copied {
+      background: linear-gradient(135deg, var(--green), #1e4d2b);
+    }
+
+    .rsvp-section {
+      background: linear-gradient(160deg, #fff8ed, #fdefc8);
+      text-align: center;
+      padding: 72px 20px;
+    }
+
+    .rsvp-desc {
+      font-size: clamp(16px, 3vw, 19px);
+      max-width: 600px;
+      margin: 0 auto 28px;
+      line-height: 1.8;
+      color: var(--deep);
+    }
+
+    .guest-input-wrap {
+      width: min(560px, 100%);
+      margin: 0 auto 18px;
+    }
+
+    .guest-input-wrap input {
+      width: 100%;
+      padding: 17px 18px;
+      border-radius: 18px;
+      border: 1.5px solid rgba(201, 148, 58, 0.52);
+      background: rgba(255, 255, 255, 0.86);
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: var(--deep);
+      outline: none;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(201, 148, 58, 0.08);
+    }
+
+    .guest-input-wrap input:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 4px rgba(181, 52, 27, 0.08);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      font-size: clamp(16px, 3vw, 18px);
+      padding: 18px 34px;
+    }
+
+    .note-section {
+      background: var(--off-white);
+      padding: 64px 20px;
+    }
+
+    .note-card {
+      width: min(760px, 100%);
+      margin: auto;
+      border-radius: 28px;
+      background: white;
+      border: 2px solid rgba(245, 215, 142, 0.9);
+      box-shadow: 0 16px 44px rgba(201, 148, 58, 0.11);
+      padding: clamp(28px, 6vw, 50px);
+      text-align: center;
+    }
+
+    .note-card p {
+      font-size: clamp(18px, 3vw, 22px);
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    footer {
+      background: var(--deep);
+      color: var(--light-gold);
+      text-align: center;
+      padding: 42px 20px;
+      font-size: 14px;
+      line-height: 2;
+      font-family: 'Lora', serif;
+    }
+
+    footer .footer-om {
+      font-size: 38px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .diya-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      font-size: 38px;
+      animation: floatDiya 2.6s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 10;
+      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.18));
+    }
+    
+
+    @keyframes floatDiya {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .quick-nav {
+        padding: 8px 8px;
+        gap: 7px;
+      }
+
+      .quick-nav a {
+        font-size: 12px;
+        padding: 7px 10px;
+      }
+
+      .hero {
+        padding: 44px 16px 62px;
+      }
+
+      .hero::before,
+      .hero::after,
+      .flower-corner {
+        display: none;
+      }
+
+      section {
+        padding: 54px 16px;
+      }
+
+      .countdown-box {
+        min-width: 78px;
+        padding: 20px 12px 13px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .btn-group,
+      .rsvp-buttons,
+      .hero-actions {
+        width: 100%;
+      }
+
+      .diya-float {
+        font-size: 32px;
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-border"></div>
+
+  <nav class="quick-nav" aria-label="Quick navigation">
+    <a href="#invite">Invitation</a>
+    <a href="#details">Details</a>
+    <a href="#countdown">Countdown</a>
+    <a href="#location">Location</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="flower-corner left"></div>
+    <div class="flower-corner right"></div>
+
+    <div class="hero-inner">
+      <div class="om-badge">🕉️</div>
+      <p class="hero-subtitle">With Blessings of Lord Ganesha</p>
+      <h1 class="hero-title">Griha<span>pravesham</span></h1>
+      <p class="hero-meaning">— The Sacred Entering of a New Home —</p>
+
+      <div class="ganesha-block">
+  <div class="ganesha-frame">
+    <img src="ganesha.png" alt="Lord Ganesha" />
+  </div>
+
+  <div class="ganesha-label">OM GANAPATAYE NAMAHA</div>
+</div>
+
+      <div class="divider"></div>
+
+      <p class="blessings-text">
+        May Lord Ganesha remove all obstacles and fill our new home with love, laughter, prosperity and divine blessings. 🪔
+      </p>
+
+      <div class="hero-actions">
+        <a href="#location" class="btn btn-red">📍 View Location</a>
+        <a href="#rsvp" class="btn btn-gold">🙏 Confirm Presence</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="invite-section" id="invite">
+    <h2 class="section-title">You're <span>Invited!</span></h2>
+    <p class="section-tag">❀ A Joyous Occasion ❀</p>
+
+    <div class="invite-card">
+      <p class="invite-salutation">With great joy and humble hearts,</p>
+      <p class="invite-body">
+        We request the pleasure of your presence and blessings as we step into our new home for the very first time.<br><br>
+        Your love and presence will make this sacred occasion <strong>truly unforgettable.</strong><br><br>
+        Please come with your family, bless our home, share our happiness and join us for lunch. 🌸
+      </p>
+      <div class="divider" style="margin-top:30px;margin-bottom:18px;"></div>
+      <p class="invite-family">— With Love, Latha Pradeep &amp; Family 🙏 —</p>
+    </div>
+  </section>
+
+  <section class="info-section" id="details">
+    <h2 class="section-title">When &amp; <span>Where</span></h2>
+    <p class="section-tag">❀ Event Details ❀</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="info-icon">📅</span>
+        <div class="info-label">Auspicious Date</div>
+        <div class="info-value">Wednesday<br>24th June, 2026</div>
+        <div class="info-sub">Shubh Muhurtham 🌸</div>
+      </div>
+
+      <div class="info-card">
+        <span class="info-icon">⏰</span>
+        <div class="info-label">Ceremony Time</div>
+        <div class="info-value">11:00 AM onwards</div>
+        <div class="info-sub">Please arrive with family 🙏</div>
+      </div>
+
+      <div class="info-card">
+        <span class="info-icon">🍽️</span>
+        <div class="info-label">Lunch</div>
+        <div class="info-value">From 12:00 PM onwards</div>
+        <div class="info-sub">Lunch arranged for all guests</div>
+      </div>
+
+      <div class="info-card">
+        <span class="info-icon">👨‍👩‍👧‍👦</span>
+        <div class="info-label">Hosted By</div>
+        <div class="info-value">Latha Pradeep<br>&amp; Family</div>
+        <div class="info-sub">With love and blessings</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="countdown-section" id="countdown">
+    <h2 class="countdown-title">✨ Counting Down to the Big Day ✨</h2>
+    <p class="countdown-sub">The auspicious moment is getting closer...</p>
+
+    <div class="countdown-grid">
+      <div class="countdown-box">
+        <div class="countdown-num" id="cd-days">--</div>
+        <div class="countdown-unit">Days</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-num" id="cd-hours">--</div>
+        <div class="countdown-unit">Hours</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-num" id="cd-mins">--</div>
+        <div class="countdown-unit">Minutes</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-num" id="cd-secs">--</div>
+        <div class="countdown-unit">Seconds</div>
+      </div>
+    </div>
+
+    <div id="countdown-message"></div>
+  </section>
+
+  <section class="location-section" id="location">
+    <h2 class="section-title">📍 <span>Location</span></h2>
+    <p class="section-tag">❀ How to Find Us ❀</p>
+
+    <div class="location-card">
+      <p class="address-text" id="address-display"></p>
+
+      <div class="btn-group">
+        <a href="https://maps.app.goo.gl/orbXEeSZNJhk6HWW7" target="_blank" rel="noopener noreferrer" class="btn btn-maps" id="mapsBtn">
+          🗺️ Open in Google Maps
+        </a>
+        <button class="btn btn-copy" id="copyBtn" onclick="copyAddress()">
+          📋 Copy Address
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="rsvp-section" id="rsvp">
+    <h2 class="section-title">🙏 RSVP &amp; <span>Confirm</span></h2>
+    <p class="section-tag">❀ Let Us Know You're Coming ❀</p>
+
+    <p class="rsvp-desc">
+      We would love to know that you are joining us. Enter your name and tap the button below. WhatsApp will open with a ready message.
+    </p>
+
+    <div class="guest-input-wrap">
+      <input type="text" id="guestName" placeholder="Enter your name / family name" autocomplete="name" />
+    </div>
+
+    <div class="rsvp-buttons">
+      <button class="btn btn-whatsapp" onclick="sendRSVP()">💬 RSVP on WhatsApp</button>
+    </div>
+  </section>
+
+  <section class="note-section">
+    <div class="note-card">
+      <h2 class="section-title" style="margin-bottom:18px;">A Humble <span>Note</span></h2>
+      <p>
+        Your presence and blessings are the most precious gift for us. We look forward to welcoming you and your family with love. 🪔
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-om">🕉️</span>
+    <strong style="font-family:'Yeseva One',serif;font-size:21px;">Grihapravesham Celebrations</strong><br>
+    24th June 2026 • 11:00 AM onwards • Lunch from 12:00 PM<br>
+    <span style="color:var(--saffron);">OM NAMAH SHIVAYA • OM GANAPATAYE NAMAHA</span><br><br>
+    <span style="opacity:0.62;font-size:12px;">Made with 🧡 for our family &amp; friends</span>
+  </footer>
+
+  <div class="diya-float">🪔</div>
+
+  <script>
+    const address = "Vinayaka Layout, House No. 15, Palanahalli Rd, Srinivaspur, Bengaluru, Karnataka 560064";
+    const mapsLink = "https://maps.app.goo.gl/orbXEeSZNJhk6HWW7";
+    const whatsappNumber = "916366223998";
+
+    /*
+      Countdown is fixed to 24 June 2026, 11:00 AM India time.
+      This will calculate correctly whenever guests open the link.
+    */
+    const eventDate = new Date("2026-06-24T11:00:00+05:30");
+
+    document.getElementById("address-display").innerHTML = address.replace(/,\s*/g, ",<br>");
+    document.getElementById("mapsBtn").href = mapsLink;
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = eventDate.getTime() - now.getTime();
+
+      if (diff <= 0) {
+        document.getElementById("countdown-message").textContent = "🎉 Today is the auspicious day. Warm welcome! 🎉";
+        ["cd-days", "cd-hours", "cd-mins", "cd-secs"].forEach(function(id) {
+          document.getElementById(id).textContent = "00";
+        });
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("cd-days").textContent = String(days).padStart(2, "0");
+      document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("cd-mins").textContent = String(mins).padStart(2, "0");
+      document.getElementById("cd-secs").textContent = String(secs).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    function copyAddress() {
+      navigator.clipboard.writeText(address).then(function() {
+        const btn = document.getElementById("copyBtn");
+        btn.classList.add("copied");
+        btn.textContent = "✅ Address Copied!";
+        setTimeout(function() {
+          btn.classList.remove("copied");
+          btn.textContent = "📋 Copy Address";
+        }, 2500);
+      }).catch(function() {
+        alert("Address: " + address);
+      });
+    }
+
+    function sendRSVP() {
+      const guestName = document.getElementById("guestName").value.trim();
+      const message = guestName
+        ? `Namaste! This is ${guestName}. We will be happy to attend the Grihapravesham ceremony on 24th June 2026. Looking forward to the celebrations. 🙏`
+        : `Namaste! We will be happy to attend the Grihapravesham ceremony on 24th June 2026. Looking forward to the celebrations. 🙏`;
+
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    }
+  </script>
+</body>
+</html>
